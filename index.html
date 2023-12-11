@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Shubham Soni</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">John Doe</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Shubham soni</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/shubhamsoni10'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/shubhamsoni9139'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+    <p><strong><h4>Intern at Birla Corporation, Chittorgarh</h4></strong></p>
+    <p>11/2023 - Present</p>
+    <p>I played a key role in designing and building an e-commerce platform that is both dynamic and responsive. This involved incorporating cutting-edge technologies like React, Tailwind CSS, and Firebase. My duties encompassed creating inventive solutions to enhance user experience and improve the efficiency of e-commerce operations.</p>
+
+    <p><strong>Intern at Gifting Memories, Jaipur</strong></p>
+    <p>08/2023 - 11/2023</p>
+    <p>I led the successful development of a dynamic and responsive e-commerce platform, utilizing advanced technologies such as React, Tailwind CSS, and Firebase. My responsibilities included conceptualizing and implementing innovative solutions to optimize user experience and streamline e-commerce operations. The project's triumph underscores my expertise in React, Tailwind CSS, and Firebase, showcasing my ability to deliver top-tier solutions that surpass client expectations.</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p><strong>Vellore Institute of Technology, Vellore</strong></p>
+              <p>B.Tech, Information Technology | 06/2021 - Present</p>
+          
+              <p><strong>Birla Shiksha Kendra, Chittaurgarh</strong></p>
+              <p>Senior-Senior secondary education | 06/2019 - 05/2021</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="data:image/png;base64,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"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Projects</h3>
+    <p><strong>B2B E-commerce Website</strong></p>
+    <p>- React, Tailwind CSS, Firebase</p>
+    <p>Online platform specifically designed for transactions between businesses. Secure login and authentication mechanisms to ensure that only authorized business entities can access the platform. Efficient tools for bulk ordering, allowing businesses to purchase products or services in larger quantities. Ensuring that the platform is accessible and user-friendly across various devices, including desktops, tablets, and smartphones.</p>
+
+    <p><strong>ChatBall</strong></p>
+    <p>- Python, Flask, HTML, CSS, JavaScript</p>
+    <p>Developed a web application using Flask serving a REST API with HTML as the frontend. Created forms in HTML for user input and implemented form handling in Flask to process and validate user submissions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Technical Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Languages</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Experienced</p> 
+                 
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3> Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C/C++</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Javascript </h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML/CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">FrameWorks</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flask</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Devloper Tools</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Vs Code</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Google Cloud Platform</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="https://cdn.dribbble.com/userupload/10548191/file/original-02a7a27f9dab678ddc8fb49e4eeb832d.png?resize=1300x1300"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/shubhamsoni9139'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://mernn.vercel.app'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="https://cdn.dribbble.com/userupload/11729112/file/original-61f388a4a602614870171bf5db9bc447.jpg?resize=1300x1300"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Shubhamsoni9139/real-time-file-transfer-via-python'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://Rtdtt.onrender.com'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:ss4185667@gmail.com">ss4185667@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/shubhamsoni10">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Shubham soni. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
